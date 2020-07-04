@@ -1,0 +1,13 @@
+api_platform:
+    title: 'API Loot'
+    description: 'API backend du projet Loot'
+    version: '0.0.1'
+    formats:
+        json:
+            mime_types: ['application/json']
+        html:
+            mime_types: ['text/html']
+    mapping:
+        paths: ['%kernel.project_dir%/src/Entity']
+    swagger:
+        versions: [3]
