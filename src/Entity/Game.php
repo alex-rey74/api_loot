@@ -131,5 +131,5 @@ class Game
     {
         $this->searches = new ArrayCollection();
     }
-    
+
 }
