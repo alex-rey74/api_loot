@@ -35,6 +35,11 @@ class Search
     private $type;
 
     /**
+     * @ORM\Column(type="integer")
+     */
+    private $nbrJoueur;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Game", inversedBy="searches")
      * @ORM\JoinColumn(nullable=false, name="game_id", referencedColumnName="id")
      */
@@ -126,5 +131,20 @@ class Search
         $this->user = $user;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getNbrJoueur()
+    {
+        return $this->nbrJoueur;
+    }
+
+    /**
+     * @param mixed $nbrJoueur
+     */
+    public function setNbrJoueur($nbrJoueur): void
+    {
+        $this->nbrJoueur = $nbrJoueur;
+    }
 
 }

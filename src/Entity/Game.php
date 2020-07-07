@@ -46,6 +46,11 @@ class Game
     private $users;
 
     /**
+     * @ORM\ManyToMany(targetEntity="Role", mappedBy="games")
+     */
+    private $roles;
+
+    /**
      * @return int
      */
     public function getId(): int
