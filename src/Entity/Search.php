@@ -8,9 +8,17 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Search
- * @ApiResource()
+ * @ApiResource(
+ *     collectionOperations={
+ *     "get",
+ *     "post",
+ *      "matchSearches"={
+ *          {"route_name"="matchSearches"},
+ *      }
+ *     }
+ * )
  * @ORM\Table(name="search")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\SearchRepository")
  */
 class Search
 {
@@ -130,6 +138,8 @@ class Search
     {
         $this->user = $user;
     }
+
+
 
     /**
      * @return mixed

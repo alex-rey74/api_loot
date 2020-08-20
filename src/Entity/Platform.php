@@ -41,6 +41,7 @@ class Platform
      */
     private $games;
 
+
     /**
      * @return int
      */

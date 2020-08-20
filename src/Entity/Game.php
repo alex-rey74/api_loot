@@ -9,7 +9,15 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Game
- * @ApiResource()
+ * @ApiResource(
+ *     collectionOperations={
+ *     "get",
+ *     "post",
+ *      "byPlatform"={
+ *     {"route_name"="byPlatform"},
+ *   }
+ *  }
+ * )
  * @ORM\Table(name="game")
  * @ORM\Entity
  */
@@ -113,7 +121,6 @@ class Game
     {
         $this->searches = $searches;
     }
-
 
 
     /**
